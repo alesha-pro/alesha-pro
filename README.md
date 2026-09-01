@@ -39,12 +39,12 @@ The rig is 4x RTX 3090 with 96 GB of VRAM in total. P2P is verified on all 12 pa
 
 <p>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=alesha-pro&amp;show_icons=true&amp;hide_border=true&amp;bg_color=00000000&amp;title_color=58a6ff&amp;icon_color=7ee787&amp;text_color=9da7b3">
-    <img height="165" alt="GitHub stats" src="https://github-readme-stats.vercel.app/api?username=alesha-pro&amp;show_icons=true&amp;hide_border=true">
+    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=alesha-pro&amp;hide_border=true&amp;theme=github-dark-blue">
+    <img height="170" alt="GitHub streak" src="https://streak-stats.demolab.com?user=alesha-pro&amp;hide_border=true">
   </picture>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=alesha-pro&amp;layout=compact&amp;hide_border=true&amp;bg_color=00000000&amp;title_color=58a6ff&amp;text_color=9da7b3">
-    <img height="165" alt="Top languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=alesha-pro&amp;layout=compact&amp;hide_border=true">
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=alesha-pro&amp;theme=github_dark">
+    <img height="170" alt="GitHub stats" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=alesha-pro">
   </picture>
 </p>
 
