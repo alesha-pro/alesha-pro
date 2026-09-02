@@ -10,7 +10,7 @@
 
 ## About
 
-By day I run infrastructure at a bank. The rest of the time I bench LLMs on a hand-built 4x RTX 3090 rig with 96 GB of VRAM, and I publish every measurement with raw traces and per-run provenance attached. People argue about quants and reasoning effort from vibes. I run the thing and count.
+By day I run infrastructure. The rest of the time I bench LLMs on a hand-built 4x RTX 3090 rig with 96 GB of VRAM, and I publish every measurement with raw traces and per-run provenance attached. People argue about quants and reasoning effort from vibes. I run the thing and count.
 
 ## Featured work
 
