@@ -1,17 +1,94 @@
-<svg width="1200" height="280" viewBox="0 0 1200 280" xmlns="http://www.w3.org/2000/svg">
-  <rect x="1" y="1" width="1198" height="278" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="2"/>
-  <circle cx="34" cy="30" r="7" fill="#ff5f57"/>
-  <circle cx="60" cy="30" r="7" fill="#febc2e"/>
-  <circle cx="86" cy="30" r="7" fill="#28c840"/>
-  <text x="600" y="35" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" fill="#484f58">alexey@rig: ~</text>
-  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="21">
-    <text x="36" y="82"><tspan fill="#7ee787">alexey@rig</tspan><tspan fill="#8b949e">:$</tspan><tspan fill="#e6edf3"> whoami</tspan></text>
-    <text x="36" y="118"><tspan fill="#e6edf3" font-weight="bold">Alexey Fateev</tspan><tspan fill="#9da7b3"> · bank infra lead by day, local-LLM builder by night</tspan></text>
-    <text x="36" y="160"><tspan fill="#7ee787">alexey@rig</tspan><tspan fill="#8b949e">:$</tspan><tspan fill="#e6edf3"> cat /proc/rig</tspan></text>
-    <text x="36" y="196"><tspan fill="#79c0ff">4x RTX 3090</tspan><tspan fill="#c9d1d9"> · </tspan><tspan fill="#79c0ff">96 GB VRAM</tspan><tspan fill="#c9d1d9"> · Ampere sm_86 · P2P 12/12 pairs · everything measured</tspan></text>
-    <text x="36" y="238"><tspan fill="#7ee787">alexey@rig</tspan><tspan fill="#8b949e">:$</tspan><tspan fill="#e6edf3"> ./publish --raw-traces --launch-flags</tspan></text>
-    <rect x="586" y="221" width="13" height="25" fill="#7ee787">
-      <animate attributeName="opacity" values="1;0;1" dur="1.1s" repeatCount="indefinite"/>
+<svg width="1200" height="320" viewBox="0 0 1200 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1200" y2="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#070a0f"/>
+      <stop offset="55%" stop-color="#0b111a"/>
+      <stop offset="100%" stop-color="#091318"/>
+    </linearGradient>
+    <radialGradient id="glowLeft" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(180 70) rotate(25) scale(460 220)">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowRight" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1030 250) rotate(-20) scale(440 210)">
+      <stop offset="0%" stop-color="#34d399" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#34d399" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accentLine" x1="40" y1="0" x2="1160" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="45%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#1e293b" stroke-width="0.7" stroke-opacity="0.45"/>
+    </pattern>
+    <clipPath id="frameClip">
+      <rect x="1" y="1" width="1198" height="318" rx="16"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#frameClip)">
+    <rect width="1200" height="320" fill="url(#bgGrad)"/>
+    <rect width="1200" height="320" fill="url(#grid)"/>
+    <rect width="1200" height="320" fill="url(#glowLeft)"/>
+    <rect width="1200" height="320" fill="url(#glowRight)"/>
+
+    <!-- Top accent hairline -->
+    <rect x="0" y="0" width="1200" height="3" fill="url(#accentLine)"/>
+
+    <!-- Window chrome -->
+    <rect x="1" y="3" width="1198" height="40" fill="#0d131d" fill-opacity="0.88"/>
+    <line x1="1" y1="43" x2="1199" y2="43" stroke="#1e293b" stroke-width="1"/>
+    <circle cx="28" cy="23" r="6" fill="#ff5f57"/>
+    <circle cx="48" cy="23" r="6" fill="#febc2e"/>
+    <circle cx="68" cy="23" r="6" fill="#28c840"/>
+    <text x="600" y="28" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#64748b">alexey@rig.lan :: 4x RTX 3090 (96 GB) + EPYC 7642 (512 GB)</text>
+
+    <!-- Live indicator -->
+    <circle cx="1116" cy="23" r="4.5" fill="#34d399">
+      <animate attributeName="opacity" values="1;0.25;1" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <text x="1128" y="27" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="600" fill="#34d399">ONLINE</text>
+
+    <!-- Main Identity -->
+    <text x="44" y="96" font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="38" font-weight="800" fill="#f8fafc" letter-spacing="-0.5">Alexey Fateev</text>
+    <text x="316" y="96" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" font-weight="700" fill="#22d3ee">@alesha-pro</text>
+
+    <text x="44" y="130" font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="17" fill="#94a3b8">Local LLM Inference, Custom CUDA Kernels, Bare-Metal Assembly &amp; Consumer GPU Benchmarks</text>
+
+    <!-- Terminal prompt block -->
+    <rect x="44" y="154" width="690" height="132" rx="10" fill="#090d14" fill-opacity="0.92" stroke="#1e293b" stroke-width="1.2"/>
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14.5">
+      <text x="64" y="182"><tspan fill="#34d399">$</tspan><tspan fill="#e2e8f0"> ./bench --rig 4x3090 --power 300W --unlock sm_86</tspan></text>
+      <text x="64" y="208"><tspan fill="#64748b">[ok]</tspan><tspan fill="#7dd3fc"> cuBLAS BF16 GEMM:</tspan><tspan fill="#f8fafc" font-weight="700"> 99.1 TFLOPS</tspan><tspan fill="#64748b"> | </tspan><tspan fill="#7dd3fc">P2P:</tspan><tspan fill="#34d399" font-weight="700"> 12/12 pairs</tspan></text>
+      <text x="64" y="234"><tspan fill="#64748b">[ok]</tspan><tspan fill="#7dd3fc"> Inkling 2 Mini (1x3090):</tspan><tspan fill="#f8fafc" font-weight="700"> 129.5 tok/s</tspan><tspan fill="#64748b"> · </tspan><tspan fill="#c4b5fd">344K ctx</tspan></text>
+      <text x="64" y="260"><tspan fill="#64748b">[ok]</tspan><tspan fill="#7dd3fc"> llm.asm (pure x86-64):</tspan><tspan fill="#f8fafc" font-weight="700"> 12 KB inference · 22 KB OS · 32 KB trainer</tspan></text>
+    </g>
+    <rect x="640" y="246" width="9" height="17" fill="#34d399">
+      <animate attributeName="opacity" values="1;0;1" dur="1.05s" repeatCount="indefinite"/>
     </rect>
+
+    <!-- Right KPI cards -->
+    <g transform="translate(760, 154)">
+      <rect x="0" y="0" width="190" height="60" rx="10" fill="#0d1522" stroke="#1f2d42" stroke-width="1.2"/>
+      <text x="16" y="23" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#64748b">GITHUB STARS</text>
+      <text x="16" y="47" font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="22" font-weight="800" fill="#facc15">1,520+</text>
+      <text x="108" y="46" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#94a3b8">48 repos</text>
+
+      <rect x="204" y="0" width="192" height="60" rx="10" fill="#0d1522" stroke="#1f2d42" stroke-width="1.2"/>
+      <text x="220" y="23" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#64748b">HF DOWNLOADS (30D)</text>
+      <text x="220" y="47" font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="22" font-weight="800" fill="#34d399">565K+</text>
+      <text x="304" y="46" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#94a3b8">16 models</text>
+
+      <rect x="0" y="72" width="190" height="60" rx="10" fill="#0d1522" stroke="#1f2d42" stroke-width="1.2"/>
+      <text x="16" y="95" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#64748b">RIG MEMORY</text>
+      <text x="16" y="119" font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="20" font-weight="800" fill="#38bdf8">96G + 512G</text>
+
+      <rect x="204" y="72" width="192" height="60" rx="10" fill="#0d1522" stroke="#1f2d42" stroke-width="1.2"/>
+      <text x="220" y="95" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#64748b">PLAYBOOK</text>
+      <text x="220" y="119" font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="20" font-weight="800" fill="#c084fc">97+ Tests</text>
+      <text x="330" y="118" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#94a3b8">raw JSON</text>
+    </g>
   </g>
+
+  <rect x="1" y="1" width="1198" height="318" rx="16" stroke="#1e293b" stroke-width="1.5"/>
 </svg>

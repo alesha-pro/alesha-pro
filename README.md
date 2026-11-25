@@ -1,56 +1,94 @@
 <div align="center">
-  <img src="assets/banner.svg" alt="alexey@rig" width="100%">
+  <img src="assets/banner.svg" alt="Alexey Fateev (@alesha-pro) - Local LLM Inference and Hardware Rig" width="100%">
 </div>
 
 <p align="center">
-  <a href="https://x.com/superalesha"><b>X / @superalesha</b></a> ·
-  <a href="https://huggingface.co/alesha-pro"><b>Hugging Face</b></a> ·
-  <a href="https://alesha.pro"><b>alesha.pro</b></a> ·
-  <a href="https://t.me/fuckup_files"><b>t.me/fuckup_files</b></a>
+  <a href="https://x.com/superalesha"><img src="https://img.shields.io/badge/X-@superalesha-000000?style=for-the-badge&logo=x&logoColor=white" alt="X"></a>
+  <a href="https://huggingface.co/alesha-pro"><img src="https://img.shields.io/badge/Hugging%20Face-565K%2B%20DLs%2Fmo-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" alt="Hugging Face"></a>
+  <a href="https://alesha.pro"><img src="https://img.shields.io/badge/Blog-alesha.pro-0ea5e9?style=for-the-badge&logo=safari&logoColor=white" alt="alesha.pro"></a>
+  <a href="https://t.me/fuckup_files"><img src="https://img.shields.io/badge/Telegram-@fuckup__files-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram"></a>
 </p>
 
-## About
+## Who I Am
 
-By day I run infrastructure. The rest of the time I bench LLMs on a hand-built 4x RTX 3090 rig with 96 GB of VRAM, and I publish every measurement with raw traces and per-run provenance attached. People argue about quants and reasoning effort from vibes. I run the thing and count.
+Infrastructure lead by day. By night I tear open MoE inference engines, write CUDA kernels and pure x86-64 assembly, abliterate and quantize frontier open-weight models, and benchmark everything on a hand-built **4x RTX 3090 (96 GB VRAM) + 512 GB 8-channel EPYC rig**.
 
-## Featured work
+Most local-AI advice online is written by people guessing from vibes or assuming everyone owns an H100. I run it on 2020 consumer cards, keep the raw JSON traces and exact launch flags, and ship whatever actually moves the needle.
 
-| Project | Stars | What it is |
-|---|:---:|---|
-| [**tools**](https://github.com/alesha-pro/tools) | ![stars](https://img.shields.io/github/stars/alesha-pro/tools?style=flat) | Things I build while running models on my own hardware: ComfyUI workflows, model setups, agent skills and benchmark configs from the rig |
-| [**atlas**](https://github.com/alesha-pro/atlas) | ![stars](https://img.shields.io/github/stars/alesha-pro/atlas?style=flat) | Interactive canvas that takes an LLM apart tensor by tensor. It measures INT8/INT4/FP8 error, distributions, spectra and outlier channels on every weight tensor |
-| [**bench-portal**](https://github.com/alesha-pro/bench-portal) | ![stars](https://img.shields.io/github/stars/alesha-pro/bench-portal?style=flat) | A catalog of games, 3D showcases and shader experiments built by AI models, filterable by the model that built them. [Live](https://bench-portal.pages.dev) |
-| [**llama.cpp-mirai-s**](https://github.com/alesha-pro/llama.cpp-mirai-s) | ![stars](https://img.shields.io/github/stars/alesha-pro/llama.cpp-mirai-s?style=flat) | llama.cpp with Mirai S support: a 2.4-bit Qwen3.8-27B in 12 GB of VRAM with 128K context, plus refusal removal at run time |
-| [**qwen38-flash-next-4x3090**](https://github.com/alesha-pro/qwen38-flash-next-4x3090) | ![stars](https://img.shields.io/github/stars/alesha-pro/qwen38-flash-next-4x3090?style=flat) | Qwen3.8 Flash Next AWQ INT4 on 4x RTX 3090: 262K context, vision, FP8 KV cache and CUDA Graphs |
-| [**redcast**](https://github.com/alesha-pro/redcast) | ![stars](https://img.shields.io/github/stars/alesha-pro/redcast?style=flat) | An agent-native, Raycast-style launcher for macOS. My fork of Tinycast with native and ACP agents, voice and screen awareness |
-| [**4x3090-llm-benchmarks**](https://github.com/alesha-pro/4x3090-llm-benchmarks) | ![stars](https://img.shields.io/github/stars/alesha-pro/4x3090-llm-benchmarks?style=flat) | Public archive of local LLM speed measurements from the rig, with exact launch commands and per-run provenance |
+---
 
-## Models on Hugging Face
+## Top Repositories
 
-My quants, abliterations and engine builds live at [huggingface.co/alesha-pro](https://huggingface.co/alesha-pro).
+### 1. Inference & Optimization
 
-- [**Qwen3.8 Flash Next Abliterated: EXL3 and Strata GGUF**](https://huggingface.co/collections/alesha-pro/qwen38-flash-next-abliterated-exl3-and-strata-gguf-6ac0da3fdaa11b99c2c146db): the uncensored Qwen3.8 Flash-Next for Strata and exllamav3, over 220,000 downloads.
-- [**GLM-5.3-Flash on 4x RTX 3090**](https://huggingface.co/collections/alesha-pro/glm-53-flash-on-4x-rtx-3090-6aca78f8275cbe99db02a6a9): GLM-5.3-Flash quants and the abliterated Maya build that fit four 24 GB cards.
-- [**Qwen3.8-27B-S-mirai-GGUF**](https://huggingface.co/alesha-pro/Qwen3.8-27B-S-mirai-GGUF): Mirai S in 12 GB of VRAM, with the vision projector and the refusal vector.
+| Repository | Stars | What It Does |
+|---|---:|---|
+| [**inference-optimization-playbook**](https://github.com/alesha-pro/inference-optimization-playbook) | ![stars](https://img.shields.io/github/stars/alesha-pro/inference-optimization-playbook?style=flat-square&color=facc15) | **97 tested hypotheses** on making 100B-600B MoE models fast on consumer GPUs (4x RTX 3090 + experts in RAM): what worked, what failed, and why. Comes as a human playbook + coding-agent skill. |
+| [**llm.asm**](https://github.com/alesha-pro/llm.asm) | ![stars](https://img.shields.io/github/stars/alesha-pro/llm.asm?style=flat-square&color=facc15) | **100% pure x86-64 NASM assembly, zero C, zero libc:** Qwen3-0.6B inference engine (**12 KB**), bare-metal bootable LLM OS (**22 KB**, verified on Proxmox), and from-scratch Mini-GPT trainer with live Braille TUI (**32 KB**). |
+| [**vllm-cross-model-kv**](https://github.com/alesha-pro/vllm-cross-model-kv) | ![stars](https://img.shields.io/github/stars/alesha-pro/vllm-cross-model-kv?style=flat-square&color=facc15) | Cross-model KV cache transfer in vLLM: a smaller model prefills, a bigger one answers directly from its cache (independent implementation of arXiv:2608.03893, measured on 2x RTX 3090). |
 
-## The rig
+### 2. Maya Inc. & Custom CUDA Engines
 
-The rig is 4x RTX 3090 with 96 GB of VRAM in total. P2P is verified on all 12 pairs, the cards run at 220 W each on PCIe 3.0 x16. Engines on the box: vLLM, llama.cpp, exllamav3 + tabbyAPI, plus SGLang when it behaves. Ampere sm_86 has no native FP8, and most quant advice out there assumes everyone owns a Hopper. I enjoy measuring what actually wins on these cards.
+| Repository / PR | Stars | What It Does |
+|---|---:|---|
+| [**maya-inkling-mini**](https://github.com/alesha-pro/maya-inkling-mini) | ![stars](https://img.shields.io/github/stars/alesha-pro/maya-inkling-mini?style=flat-square&color=facc15) | **Inkling 2 Mini on a single RTX 3090:** **129.5 tok/s** decode (up to **210 tok/s** with DSpark), **344K context**, vision and tools. Custom `maya-ik2` engine keeping every expert in 24 GB VRAM (2.3x decode / 3.7x prefill over `llama.cpp`). |
+| [**project-maya**](https://github.com/alesha-pro/project-maya) | ![stars](https://img.shields.io/github/stars/alesha-pro/project-maya?style=flat-square&color=facc15) | Project Maya fork + upstream CUDA engine work ([`maya-ling`](https://github.com/mw00/project-maya/pull/1224) for Ling-3.2-air, [`maya-hy4f`](https://github.com/mw00/project-maya/pull/1068) Hy4-Flash TP+CPU lane, [`maya-ds4`](https://github.com/mw00/project-maya/pull/811) DeepSeek prefill +29-72%, and runtime refusal projection `STRATA_GLM_ABLATE`). |
 
-## Highlights from X
+### 3. Tools, Apps & Builders
 
-- [NVIDIA sold millions of 3090s with half the tensor speed switched off](https://x.com/superalesha/status/2113332444283691105). One kernel module took my BF16 tensor pipe from 82 to 155 TFLOPS, with outputs matching the stock run byte for byte.
-- [DeepSeek just published the price of a token](https://x.com/superalesha/status/2112653788574339075). 155 trillion tokens a day at $38 of revenue per GPU-hour: at these prices, serving a frontier-class model is a very profitable business.
-- [110,409 downloads in 9 days](https://x.com/superalesha/status/2110062105692926352) for the uncensored Qwen3.8 Flash-Next I put up for Strata. My part was a 480 KB file and a weekend of measuring.
-- [A 27B model in 12 GB of VRAM](https://x.com/superalesha/status/2107896192591945829). Mirai S Qwen3.8-27B at 2.4 bits per weight: full 262K context, 70 tok/s, and now uncensored.
-- [Local AI performance is a software problem](https://x.com/superalesha/status/2111885825218838905). A 2020 RTX 3090 runs Qwen3.8 27B up to 4.6x faster, and nobody bought a thing.
-- [My RTX 3090 made these while I was asleep](https://x.com/superalesha/status/2107748850005864633). 103 images and 63 clips overnight with Qwen-Image-2.1 and MiniMax H3. No cloud, no credits, no queue.
+| Repository | Stars | What It Does |
+|---|---:|---|
+| [**tools**](https://github.com/alesha-pro/tools) | ![stars](https://img.shields.io/github/stars/alesha-pro/tools?style=flat-square&color=facc15) | My flagship toolbox from the 4x 3090 rig: production ComfyUI workflows, local-AI model setups, agent skills, and benchmark configs. |
+| [**atlas**](https://github.com/alesha-pro/atlas) | ![stars](https://img.shields.io/github/stars/alesha-pro/atlas?style=flat-square&color=facc15) | Interactive canvas that dissects an LLM tensor by tensor: measured INT8 / INT4 / FP8 quantization error, weight distributions, spectra, and outlier channels across all 1,199 tensors. |
+| [**redcast**](https://github.com/alesha-pro/redcast) | ![stars](https://img.shields.io/github/stars/alesha-pro/redcast?style=flat-square&color=facc15) | Open-source, agent-native Raycast replacement for macOS in SwiftUI: real Raycast extensions, local models, voice dictation, screen awareness, and ACP coding agents without paywalls. |
+| [**bench-portal**](https://github.com/alesha-pro/bench-portal) | ![stars](https://img.shields.io/github/stars/alesha-pro/bench-portal?style=flat-square&color=facc15) | Playable browser-game benchmark portal: 3D scenes, shaders, and mini-games built autonomously by frontier LLMs, filterable by model. [Live](https://bench-portal.pages.dev) |
+| [**claude-memory-bridge**](https://github.com/alesha-pro/claude-memory-bridge) | ![stars](https://img.shields.io/github/stars/alesha-pro/claude-memory-bridge?style=flat-square&color=facc15) | Share live per-project Claude Code memory across Antigravity CLI, Factory Droid, Codex, Cursor, OpenCode, and Windsurf via MCP, plus nightly Auto-Dream consolidation. |
 
-## Numbers
+### 4. Benchmarks & Reproducible Releases
 
-<p>
+| Repository | Stars | What It Does |
+|---|---:|---|
+| [**evalatro**](https://github.com/alesha-pro/evalatro) | ![stars](https://img.shields.io/github/stars/alesha-pro/evalatro?style=flat-square&color=facc15) | Open benchmark where language models play real Balatro end-to-end. |
+| [**4x3090-llm-benchmarks**](https://github.com/alesha-pro/4x3090-llm-benchmarks) | ![stars](https://img.shields.io/github/stars/alesha-pro/4x3090-llm-benchmarks?style=flat-square&color=facc15) | Public archive of local LLM speed measurements from the rig with exact launch commands and per-run provenance. |
+| [**qwen38-flashnext-strata-4x3090**](https://github.com/alesha-pro/qwen38-flashnext-strata-4x3090) | ![stars](https://img.shields.io/github/stars/alesha-pro/qwen38-flashnext-strata-4x3090?style=flat-square&color=facc15) | Qwen3.8-Flash-Next on 2x RTX 3090: 150 tok/s on code, 262K context with Strata 0.2.10 + DFlash2 + refusal vectors. |
+
+---
+
+## Hugging Face (565,000+ Downloads / 30d)
+
+My quants, runtime refusal vectors, and custom GGUF/EXL3 builds live at [**huggingface.co/alesha-pro**](https://huggingface.co/alesha-pro):
+
+- [**Qwen3.8-Flash-Next-abliterated-GSQ-RCO-Strata-GGUF**](https://huggingface.co/alesha-pro/Qwen3.8-Flash-Next-abliterated-GSQ-RCO-Strata-GGUF): **385,000+ downloads (30d)** · Uncensored Qwen3.8 Flash-Next for Strata with runtime control-vector projection.
+- [**Hy4-flash-Uncensored-GGUF**](https://huggingface.co/alesha-pro/Hy4-flash-Uncensored-GGUF): **119,000+ downloads (30d)** · Tencent Hy4-Flash (220B MoE) uncensored build running at 262K context + vision on consumer cards.
+- [**GLM-5.3-Flash-abliterated-Maya-M-GGUF**](https://huggingface.co/alesha-pro/GLM-5.3-Flash-abliterated-Maya-M-GGUF): **36,000+ downloads (30d)** · Mixed-quant abliterated build tuned to saturate 4x RTX 3090 (96 GB VRAM).
+- [**Qwen3.8-27B-S-mirai-GGUF**](https://huggingface.co/alesha-pro/Qwen3.8-27B-S-mirai-GGUF): **3,200+ downloads (30d)** · 2.4-bit Mirai S in 12 GB VRAM with vision projector and refusal vector.
+
+---
+
+## The Rig
+
+<div align="center">
+  <img src="assets/rig-stack.svg" alt="4x RTX 3090 + AMD EPYC 7642 + Engine Stack" width="100%">
+</div>
+
+---
+
+## Selected Engineering & X Highlights
+
+- [**NVIDIA sold millions of 3090s with half the tensor speed switched off**](https://x.com/superalesha/status/2113332444283691105) (`672K+ views`): One kernel module (`gpu-unlock`) lifted my BF16 tensor pipe from 64.4 to **99.1 TFLOPS** at 300 W with bit-exact outputs.
+- [**Inkling 2 Mini at 129.5 tok/s on ONE RTX 3090**](https://x.com/superalesha/status/2124102269138346409) (`50.7K+ views`): Built a custom `maya-ik2` CUDA loop keeping every expert in 24 GB VRAM with 344K context (**2.3x decode / 3.7x prefill** over `llama.cpp`).
+- [**Open-sourced 97 tested MoE optimization hypotheses**](https://x.com/superalesha/status/2124128158072922512) (`61.2K+ views`): 4+ months of empirical profiling on 400B-600B MoE models across 4x RTX 3090 + 512 GB 8-channel RAM.
+- [**512K context in 0.8 GB of VRAM on DeepSeek V4.1-Flash 1017**](https://x.com/superalesha/status/2115845365446439273) (`40.1K+ views`): 500K prompt prefill at **1,804 tok/s**, 39.7 tok/s decode on 4x RTX 3090.
+- [**Introducing Redcast: Free, Open-Source Raycast for macOS**](https://x.com/superalesha/status/2122986286239580609) (`67.4K+ views`): Native SwiftUI launcher with local models, voice, and real extensions.
+- [**Pure x86-64 Assembly LLM Trilogy (`llm.asm`)**](https://x.com/superalesha/status/2125563464424862044): 12 KB Qwen3-0.6B inference binary, 22 KB bare-metal OS booting on Proxmox, and 32 KB trainer with live Braille TUI. Zero C, zero libc.
+
+---
+
+## Live GitHub Telemetry
+
+<p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=alesha-pro&amp;hide_border=true&amp;theme=github-dark-blue">
+    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=alesha-pro&amp;hide_border=true&amp;background=090d14&amp;stroke=1e293b&amp;ring=34d399&amp;fire=22d3ee&amp;currStreakLabel=34d399&amp;sideLabels=94a3b8&amp;dates=64748b&amp;currStreakNum=f8fafc&amp;sideNums=f8fafc">
     <img height="170" alt="GitHub streak" src="https://streak-stats.demolab.com?user=alesha-pro&amp;hide_border=true">
   </picture>
   <picture>
@@ -59,6 +97,6 @@ The rig is 4x RTX 3090 with 96 GB of VRAM in total. P2P is verified on all 12 pa
   </picture>
 </p>
 
----
-
-Every number on this profile comes from a real run. If it is not in a repo with raw data, I did not say it.
+<p align="center">
+  <sub>Every number on this page comes from a real run. If it is not in a repo with raw traces, I did not ship it.</sub>
+</p>

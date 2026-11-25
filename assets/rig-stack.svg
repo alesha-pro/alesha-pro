@@ -1,0 +1,41 @@
+<svg width="1200" height="228" viewBox="0 0 1200 228" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="1" y="1" width="1198" height="226" rx="14" fill="#090d14" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <text x="28" y="34" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="700" fill="#22d3ee">HARDWARE &amp; ENGINE MATRIX // VERIFIED ON METAL</text>
+  <text x="1172" y="34" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#64748b">rig.lan · sm_86 · Rome Zen 2 · M5 Pro</text>
+  <line x1="28" y1="48" x2="1172" y2="48" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Card 1: GPUs -->
+  <g transform="translate(28, 66)">
+    <rect width="368" height="136" rx="10" fill="#0d1420" stroke="#1f2d42" stroke-width="1.2"/>
+    <text x="18" y="26" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="700" fill="#34d399">COMPUTE // 4x RTX 3090</text>
+    <text x="18" y="54" font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="22" font-weight="800" fill="#f8fafc">96 GB VRAM</text>
+    <text x="166" y="54" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12.5" fill="#94a3b8">@ 300 W/GPU</text>
+    <text x="18" y="82" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12.5" fill="#cbd5e1">• gpu-unlock DKMS: 99.1 TFLOPS BF16</text>
+    <text x="18" y="102" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12.5" fill="#cbd5e1">• P2P verified on all 12/12 pairs</text>
+    <text x="18" y="122" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12.5" fill="#cbd5e1">• PCIe 3.0 x16 · 52 GB/s total H2D</text>
+  </g>
+
+  <!-- Card 2: Host RAM/CPU -->
+  <g transform="translate(416, 66)">
+    <rect width="368" height="136" rx="10" fill="#0d1420" stroke="#1f2d42" stroke-width="1.2"/>
+    <text x="18" y="26" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="700" fill="#38bdf8">HOST // AMD EPYC 7642</text>
+    <text x="18" y="54" font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="22" font-weight="800" fill="#f8fafc">512 GB DDR4</text>
+    <text x="172" y="54" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12.5" fill="#94a3b8">8-channel NPS1</text>
+    <text x="18" y="82" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12.5" fill="#cbd5e1">• STREAM Triad ~82 GB/s peak</text>
+    <text x="18" y="102" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12.5" fill="#cbd5e1">• Runs 400B-600B MoE w/ RAM offload</text>
+    <text x="18" y="122" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12.5" fill="#cbd5e1">• MacBook Pro M5 Pro (48 GB) daily</text>
+  </g>
+
+  <!-- Card 3: Engines -->
+  <g transform="translate(804, 66)">
+    <rect width="368" height="136" rx="10" fill="#0d1420" stroke="#1f2d42" stroke-width="1.2"/>
+    <text x="18" y="26" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="700" fill="#c084fc">STACK // ENGINES &amp; TOOLS</text>
+    <text x="18" y="54" font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="22" font-weight="800" fill="#f8fafc">CUDA + NASM</text>
+    <text x="174" y="54" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12.5" fill="#94a3b8">zero-bloat</text>
+    <text x="18" y="82" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12.5" fill="#cbd5e1">• Maya (maya-ik2, hy4f, ds4, ling)</text>
+    <text x="18" y="102" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12.5" fill="#cbd5e1">• vLLM · Strata · llama.cpp · ExLlamaV3</text>
+    <text x="18" y="122" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12.5" fill="#cbd5e1">• Pure x86-64 ASM · SwiftUI · TypeScript</text>
+  </g>
+</svg>
