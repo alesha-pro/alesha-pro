@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/banner.svg" alt="Alexey Fateev (@alesha-pro) - Local LLM Inference and Hardware Rig" width="100%">
+  <img src="assets/hero-banner.svg" alt="Alexey Fateev (@alesha-pro) - Local LLM Inference and Hardware Rig" width="100%">
 </div>
 
 <p align="center">
